@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   build:
-    name: Build site with Jekyll
+    name: Build and internal link-check site
     runs-on: ubuntu-latest
 
     steps:
@@ -29,12 +29,23 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
 
-      - name: Install html-proofer
-        run: gem install html-proofer -v 5.2.0
+      - name: Setup Node (for crawler)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
 
-      - name: Check built site links (HTMLProofer)
+      - name: Install crawler + local server
+        run: npm install -g broken-link-checker http-server
+
+      - name: Serve _site in background
         run: |
-          htmlproofer ./_site \
-            --disable-external \
-            --allow-hash-href \
-            --url-ignore "/^\/skills-github-pages\//"
+          http-server ./_site -p 4000 -a 127.0.0.1 &
+          sleep 5
+
+      - name: Crawl local site (internal links only)
+        run: |
+          blc http://127.0.0.1:4000/skills-github-pages/ \
+            --recursive \
+            --ordered \
+            --filter-level 3 \
+            --exclude "^https?://"
