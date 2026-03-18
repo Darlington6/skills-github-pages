@@ -1,3 +1,16 @@
+# skills-github-pages
+
+Personal portfolio site built with Jekyll and published with GitHub Pages.
+
+## Run locally
+
+Prereqs: Ruby + Bundler installed.
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
 
 <div align="center">
 
