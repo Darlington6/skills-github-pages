@@ -12,4 +12,4 @@ A lightweight personal site built with Jekyll and hosted on GitHub Pages.
 ### 2) Learning Notes
 Short write-ups about tools, workflows, and lessons learned while building software.
 
-*(Replace these with your real projects + links.)*
+*(Will replace these with your real projects + links later.)*
