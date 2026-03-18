@@ -28,3 +28,13 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
+
+      - name: Install html-proofer
+        run: gem install html-proofer
+
+      - name: Check built site links (HTMLProofer)
+        run: |
+          htmlproofer ./_site \
+            --disable-external \
+            --check-html \
+            --allow-hash-href
