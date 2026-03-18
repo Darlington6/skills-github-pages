@@ -1,24 +1,15 @@
 ---
-title: Welcome to my blog!
+layout: page
+title: Home
+permalink: /
 ---
 
-This is my personal blog where I'll share my thoughts, projects, and learning journey.
+# Hi, I’m Darlington6
 
-## About Me
+Welcome to my personal portfolio site. Here you can find:
 
-I'm passionate about technology, software development, and continuous improvement.
-
-## What I'll Write About
-
-- Software development practices
-- DevOps and DevSecOps
-- Agile methodologies
-- Personal projects and experiments
-
-## Get in Touch
-
-Feel free to connect with me on [GitHub](https://github.com)!
-
----
-
-*Thanks for visiting!*
+- My background and what I’m learning (**About**)
+- Things I’ve built (**Projects**)
+- A short professional summary (**Resume**)
+- How to reach me (**Contact**)
+- Notes and write-ups (**Blog**)
