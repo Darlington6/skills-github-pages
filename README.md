@@ -27,6 +27,15 @@ Open the live site here:
 - GitHub Pages (`github-pages` gem)
 - Markdown content
 
+## Get started
+
+Clone the repository and move into the project directory:
+
+```bash
+git clone https://github.com/Darlington6/skills-github-pages.git
+cd skills-github-pages
+```
+
 ## Run locally
 
 Prerequisites:
