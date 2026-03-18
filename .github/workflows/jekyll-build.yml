@@ -53,4 +53,4 @@ jobs:
             --recursive \
             --ordered \
             --filter-level 3 \
-            --exclude "^https?:\/\/(?!127\.0\.0\.1:4000)"
+            --exclude-external
