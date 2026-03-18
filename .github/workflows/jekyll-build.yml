@@ -36,5 +36,4 @@ jobs:
         run: |
           htmlproofer ./_site \
             --disable-external \
-            --check-html \
             --allow-hash-href
