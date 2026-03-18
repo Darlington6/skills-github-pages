@@ -24,10 +24,11 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Build with Jekyll
+      - name: Build with Jekyll (output under baseurl folder)
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --trace
+        run: |
+          bundle exec jekyll build --trace --destination "./_site/skills-github-pages"
 
       - name: Setup Node (for crawler)
         uses: actions/setup-node@v4
@@ -41,6 +42,10 @@ jobs:
         run: |
           http-server ./_site -p 4000 -a 127.0.0.1 &
           sleep 5
+
+      - name: Smoke test that the baseurl page is reachable
+        run: |
+          curl -I --fail http://127.0.0.1:4000/skills-github-pages/ >/dev/null
 
       - name: Crawl local site (internal links only)
         run: |
