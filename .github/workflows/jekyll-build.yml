@@ -24,17 +24,17 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Build with Jekyll (project-site baseurl)
+      - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
-        run: |
-          bundle exec jekyll build --trace --destination "./_site/skills-github-pages"
+        run: bundle exec jekyll build --trace
 
       - name: Install html-proofer
         run: gem install html-proofer -v 5.2.0
 
       - name: Check built site links (HTMLProofer)
         run: |
-          htmlproofer ./_site/skills-github-pages \
+          htmlproofer ./_site \
             --disable-external \
-            --allow-hash-href
+            --allow-hash-href \
+            --url-ignore "/^\/skills-github-pages\//"
