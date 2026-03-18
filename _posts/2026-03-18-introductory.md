@@ -27,7 +27,7 @@ I'm a developer who believes that good software is about more than just code—i
 
 ## Let's Connect!
 
-I'd love to hear from you. Feel free to reach out on [GitHub](https://github.com) or leave a comment below.
+I'd love to hear from you. Feel free to reach out on [GitHub](https://github.com/Darlington6) or leave a comment below.
 
 ---
 
