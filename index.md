@@ -2,8 +2,6 @@
 title: Welcome to my blog!
 ---
 
-# Welcome to My Blog!
-
 This is my personal blog where I'll share my thoughts, projects, and learning journey.
 
 ## About Me
