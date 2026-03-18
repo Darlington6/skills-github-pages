@@ -3,15 +3,15 @@ description: Personal portfolio site — projects, resume, and blog.
 author: Darlington6
 
 theme: jekyll-theme-cayman
-
-# Nice add-ons
 show_downloads: false
 markdown: kramdown
 
-# Blog/permalinks
+# REQUIRED for project sites like /skills-github-pages/
+url: "https://darlington6.github.io"
+baseurl: "/skills-github-pages"
+
 permalink: /blog/:year/:month/:day/:title/
 
-# Basic nav (used by header include below)
 nav:
   - title: Home
     url: /
