@@ -1,4 +1,27 @@
-theme: minima
-title: Darlington6's personal blog
-description: This is where I share cool stuff about my life
+title: Darlington6's Portfolio
+description: Personal portfolio site — projects, resume, and blog.
 author: Darlington6
+
+theme: jekyll-theme-cayman
+
+# Nice add-ons
+show_downloads: false
+markdown: kramdown
+
+# Blog/permalinks
+permalink: /blog/:year/:month/:day/:title/
+
+# Basic nav (used by header include below)
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Projects
+    url: /projects/
+  - title: Resume
+    url: /resume/
+  - title: Contact
+    url: /contact/
+  - title: Blog
+    url: /blog/
