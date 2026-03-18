@@ -2,10 +2,22 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include header.html %}
-    <main class="container" role="main">
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ site.description }}</h2>
+
+      <nav>
+        {% for item in site.nav %}
+          <a class="btn" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+
+    <main id="content" class="main-content" role="main">
       {{ content }}
+      {% include footer.html %}
     </main>
-    {% include footer.html %}
   </body>
 </html>
